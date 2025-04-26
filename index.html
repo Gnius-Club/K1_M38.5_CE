@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook - Misión 38.5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #5DADE2; /* Azul Gnius */
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        .banner {
+            background-color: #85C1E9; /* Azul más claro */
+            color: #333;
+            padding: 15px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .banner:hover {
+            background-color: #AED6F1;
+        }
+        .banner .title {
+            font-size: 1.3em;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            margin-top: 8px;
+            border-top: 1px solid #fff;
+            padding-top: 8px;
+            color: #1A5276; /* Azul oscuro texto */
+        }
+        .content {
+            display: none;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            background-color: #EAF2F8; /* Azul muy claro fondo */
+            border-radius: 5px;
+        }
+        .dialogue {
+            background-color: #FEF9E7; /* Amarillo pálido para diálogo */
+            border: 1px solid #FAD7A0;
+            border-radius: 10px;
+            padding: 10px 15px;
+            margin: 15px 0;
+            text-align: left; /* Cambiado a izquierda para mejor lectura */
+            font-style: italic;
+            color: #784212; /* Marrón oscuro texto */
+            position: relative; /* Para el bocadillo */
+            border-left: 5px solid #F39C12; /* Naranja */
+        }
+
+        .dropdown {
+            margin-bottom: 25px;
+            text-align: center; /* Centrar dropdown */
+        }
+        .dropdown label {
+            font-weight: bold;
+            color: #1A5276;
+        }
+        .dropdown select {
+            font-size: 1.1em;
+            padding: 8px 12px;
+            margin-left: 10px;
+            border-radius: 5px;
+            border: 1px solid #85C1E9;
+        }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px;}
+        td { padding: 12px; border: 1px solid #AED6F1; vertical-align: top; }
+        td strong { color: #1A5276; }
+        .level-title { /* Clase específica para el título del nivel */
+             text-align: center;
+             color: #5DADE2;
+             font-size: 1.4em;
+             margin-bottom: 20px;
+        }
+        /* Clases para ocultar/mostrar contenido por nivel */
+        .k1-content, .k2-content, .k3-content { display: none; }
+         .activity.active .banner {
+             background-color: #AED6F1; /* Slightly different color when active */
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Playbook - Misión 38.5: ¡Descifrando el Mensaje del Espía Zorp!</h1>
+        </div>
+
+        <div class="dropdown">
+            <label for="class-level">Nivel:</label>
+            <select id="class-level" onchange="updateContent()">
+                <option value="K1">K1 (3 años)</option>
+                <option value="K2">K2 (4 años)</option>
+                <option value="K3">K3 (5 años)</option>
+            </select>
+        </div>
+
+        <h2 id="selected-level" class="level-title">Nivel: K1 (3 años)</h2>
+
+        <!-- ............................................Aquí empezarán las actividades........................................... -->
+
+<!-- Actividad 0: Revisión de Materiales -->
+<div id="activity-0" class="activity">
+    <div class="banner" onclick="toggleContent('revision_materiales')">
+        <div class="title">📚 Actividad 0: Revisión de Materiales</div>
+        <div class="subtitle">Objetivo: Asegurarse de que todos los materiales necesarios para la clase estén disponibles y preparados antes de que lleguen los niños.</div>
+    </div>
+    <div id="revision_materiales" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (N/A):</strong> Revisa que tengas listos los materiales indicados en la **DIAPOSITIVA 1**: 1 Set LEGO Coding Express (tren, vías rectas/curvas, ladrillos acción rojo, azul, amarillo, blanco, verde) y 10 iBricks por cada pareja. Pre-montar las vías con los patrones incompletos/incorrectos según el nivel antes de la clase.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 1: Bienvenida e Introducción -->
+<div id="activity-1" class="activity">
+    <div class="banner" onclick="toggleContent('bienvenida')">
+        <div class="title">🎉 Actividad 1: ¡Mensaje Secreto Interceptado! ⏰ Tiempo: 1 minuto</div>
+        <div class="subtitle">Objetivo: Introducir la idea de mensajes codificados, patrones secretos y la posibilidad de errores o partes faltantes.</div>
+    </div>
+    <div id="bienvenida" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la **DIAPOSITIVA 2** “Bienvenida”. Saluda al CODE SQUAD como si fueran agentes secretos y habla sobre mensajes codificados.</td>
+                <td>
+                    <div class="dialogue">
+                        "¡Atención, agentes secretos del CODE SQUAD! ¡Tenemos una transmisión urgente! ¿Saben qué son los mensajes secretos? ¡Son mensajes escondidos que solo los espías inteligentes pueden entender! Usan códigos y patrones especiales."
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (0.5 minutos):</strong> Reproduce la **DIAPOSITIVA 3** "Gimnasio CODE SQUAD". Explica que a veces los mensajes secretos llegan con errores o partes borradas y hay que ser detective para descifrarlos.</td>
+                <td>
+                     <div class="dialogue">
+                        "¡Pero a veces, cuando se envía un mensaje secreto muy rápido, algunas partes se borran o se mezclan! ¡Llega incompleto o con errores! ¡Y solo los mejores detectives de códigos pueden encontrar el error, descubrir el patrón secreto y arreglar el mensaje! ¡Vamos al Gimnasio Cerebral a entrenar nuestros ojos de lince para encontrar patrones escondidos y arreglar códigos secretos!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 2: Baile de Algoritmos -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('baile-algoritmos')">
+        <div class="title">🎶 Actividad 2: Baile de Algoritmos ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Objetivo: Practicar la identificación de secuencias y la anticipación del siguiente paso.</div>
+    </div>
+    <div id="baile-algoritmos" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la **DIAPOSITIVA 4** “Baile de Algoritmos”. Guía el baile, quizás deteniéndote antes del último paso de una secuencia repetida y preguntando "¿Qué creen que sigue?".</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Este baile es un código en movimiento! ¡Tiene un patrón secreto! ¡Adelante, giro, aplauso... Adelante, giro... ¿Qué sigue? ¡Aplauso! ¡Hay que estar atentos para saber cómo termina la secuencia! ¡Así practicamos para descifrar el mensaje secreto!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 3: Planteamiento del Problema - ¡El Mensaje del Espía Zorp! -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('planteamiento-problema')">
+        <div class="title">👾 Actividad 3: ¡El Código Confuso de Zorp! ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Objetivo: Presentar la historia del mensaje interceptado, la necesidad de descifrarlo (corregir el patrón) para encontrar los cristales, y el rol del tren.</div>
+    </div>
+    <div id="planteamiento-problema" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1.5 minutos):</strong> Reproduce la **DIAPOSITIVA 5**. Narra la historia del agente Zorp en el Planeta Zirconia y su mensaje interceptado sobre cristales de energía.</td>
+                <td>
+                     <div class="dialogue">
+                        "¡Agentes CODE SQUAD! ¡Hemos interceptado un mensaje secreto de nuestro mejor espía, el Agente Zorp, desde el lejano Planeta Zirconia! ¡Zorp ha encontrado la ubicación de unos cristales de energía súper poderosos que necesitamos para el cuartel general! ¡Pero envió el mensaje con un código secreto para que nadie más lo entendiera!"
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1.5 minutos):</strong> Reproduce la **DIAPOSITIVA 6**. Explica el reto: El mensaje es un patrón de señales (ladrillos de acción) en una vía, pero llegó dañado (incompleto o con errores). Hay que analizarlo, encontrar la regla del patrón, corregirlo/completarlo, y luego enviar al Coding Express por la ruta correcta para recoger los cristales (iBricks).</td>
+                <td>
+                     <div class="dialogue">
+                        "¡El mensaje de Zorp es un camino codificado! ¡Una secuencia de señales (nuestros ladrillos de acción) que marca la ruta exacta a los cristales! Pero ¡oh, no! ¡Parece que la transmisión se cortó o hubo interferencia! ¡El patrón está incompleto o tiene señales equivocadas! ¡No podemos enviar al Coding Express así, se perdería! Nuestro reto, súper detectives, es: **Primero**, mirar con atención la vía con el mensaje dañado. **Segundo**, descubrir cuál es el patrón secreto que Zorp quería usar. **Tercero**, ¡corregir los errores! Quitar los ladrillos incorrectos o poner los que faltan. **Cuarto**, una vez arreglado el código, ¡enviaremos al Coding Express por la ruta correcta para recoger los Cristales de Energía (que marcaremos con bloques)! ¿Listos para descifrar?"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 4: Formación de Parejas -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('formacion-parejas')">
+        <div class="title">🤝 Actividad 4: ¡Equipos de Descifradores! ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Objetivo: Formar parejas para analizar, depurar y completar juntos el patrón codificado.</div>
+    </div>
+    <div id="formacion-parejas" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la **DIAPOSITIVA 7** “Formación de Equipos”. Explica que descifrar códigos secretos es un trabajo para mentes brillantes trabajando juntas. Forma las parejas.</td>
+                <td>
+                     <div class="dialogue">
+                        "¡Descifrar códigos confusos necesita de los mejores agentes secretos! ¡Y dos agentes trabajando en equipo pueden encontrar pistas que uno solo podría pasar por alto! ¡Formen sus Equipos de Descifradores para resolver el misterio del mensaje de Zorp!"
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Verifica que todos tengan pareja. Prepara las vías pre-montadas con los patrones erróneos/incompletos para cada nivel y ten listos los ladrillos correctos para el intercambio/añadido.</td>
+                <td>
+                     <div class="dialogue">
+                        "¿Listos, Descifradores? ¡Cada equipo recibirá una copia del mensaje dañado de Zorp (la vía con los ladrillos)! ¡Tendrán que usar sus habilidades de detective para encontrar el patrón y arreglarlo! ¡Preparen sus lupas!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 5: Reto de Codificación - ¡Analiza y Corrige el Código Secreto! -->
+<div id="activity-5" class="activity">
+    <div class="banner" onclick="toggleContent('reto-codificacion')">
+        <div class="title">🔧 Actividad 5: ¡Reparando el Mensaje de Zorp! ⏰ Tiempo: 10 minutos</div>
+        <div class="subtitle">Objetivo: Analizar la secuencia presentada, identificar el patrón subyacente, detectar el error o la omisión, y corregirlo añadiendo/cambiando el ladrillo de acción adecuado.</div>
+    </div>
+    <div id="reto-codificacion" class="content">
+        <table>
+             <!-- Paso 1: Observar el Patrón Dañado -->
+             <tr>
+                <td><strong>PASO 1 (3 minutos):</strong> Reproduce la **DIAPOSITIVA 8** "¡El Código Confuso!". Entrega/muestra a cada pareja la vía pre-montada con el patrón dañado de su nivel. Pide que observen los ladrillos y el orden.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Agentes, aquí está el mensaje dañado de Zorp! ¡Miren con mucha atención los ladrillos de colores en la vía! ¿Qué colores ven? ¿En qué orden están? ¿Notan algo raro? ¿Algo que parece que se repite pero luego cambia? ¡Observen como detectives!"
+                    </div>
+                </td>
+            </tr>
+            <!-- Paso 2: Identificar Regla y Corregir (Específico por Nivel) -->
+             <!-- K1 -->
+            <tr class="k1-content">
+                <td><strong>PASO 2 - K1 (7 minutos):</strong> Reproduce la **DIAPOSITIVA 9** "Código K1: Falta un Azul". Vía: Rojo - Azul - Rojo - [ESPACIO]. Patrón=A-B. Pregunta: "Vemos Rojo(A)-Azul(B)-Rojo(A)... ¿Qué falta para seguir el patrón A-B?". Guía para añadir 1 ladrillo AZUL. Marcar destino con iBricks ("Cristales K1").</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Equipo K1! Miren su código: Rojo, Azul, Rojo... ¡y un hueco! Parece que el patrón es A-B, A-B... Rana(A)-Pájaro(B), Rana(A)... ¿Qué pájaro falta? (Espera respuesta: ¡Azul!). ¡Exacto! ¡El mensaje se cortó! Tomen un ladrillo AZUL y pónganlo en el espacio vacío. ¡Ahora pongan unos bloques al final para marcar dónde están los Cristales K1!"
+                    </div>
+                </td>
+            </tr>
+             <!-- K2 -->
+             <tr class="k2-content">
+                 <td><strong>PASO 2 - K2 (7 minutos):</strong> Reproduce la **DIAPOSITIVA 10** "Código K2: Señal Equivocada y Falta Rojo". Vía con curva: Rojo-Azul-Amarillo-Rojo-AZUL- [ESPACIO]. Patrón=A-B-C. Error: El 5º ladrillo es AZUL pero debería ser AMARILLO (C). Falta: El último debe ser ROJO (A). Guía para cambiar el 5º Azul por Amarillo, y añadir 1 Rojo al final. Marcar destino "Cristales K2".</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Detectives K2! Su código es más largo: Rojo-Azul-Amarillo-Rojo... ¡y luego un Azul y un hueco! ¡Qué lío! ¿Cuál creen que es el patrón secreto? ¡A-B-C! ¡Rojo-Azul-Amarillo! Si después del segundo Rojo(A) debería seguir B y C... ¿Está bien ese Azul que sigue? (Espera resp: ¡No! ¡Debería ser Amarillo/C!). ¡Correcto! ¡Cambien ese Azul por un AMARILLO! Y ahora, después de A-B-C, ¿qué tocaría para repetir? (Espera resp: ¡A/Rojo!). ¡Falta el Rojo al final! ¡Añadan un ladrillo ROJO! ¡Pongan bloques al final para los Cristales K2!"
+                    </div>
+                </td>
+            </tr>
+             <!-- K3 -->
+             <tr class="k3-content">
+                 <td><strong>PASO 2 - K3 (7 minutos):</strong> Reproduce la **DIAPOSITIVA 11** "Código K3: Errores y Omisiones". Vía compleja: Rojo-Azul-Azul-VERDE-Rojo-Azul-[ESPACIO]-VERDE. Patrón=A-BB-C (Rojo-Azul-Azul-Verde). Errores: El 4º es Verde pero debería ser Rojo (A). Falta: Después del 2º Azul falta otro Azul (B) y al final falta el Verde (C). Guía para cambiar el 1er Verde por Rojo, añadir 1 Azul y 1 Verde. Marcar destino "Cristales K3".</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Agentes expertos K3! ¡Este código está muy dañado! Rojo-Azul-Azul-Verde-Rojo-Azul-Hueco-Verde... ¡Uf! ¿Cuál será el patrón? ¡Quizás A-BB-C! Rojo(A)-Azul(B)-Azul(B)-Verde(C). Veamos... ¿El cuarto ladrillo, ese Verde, encaja? Si es A-BB-C, después de Rojo-Azul-Azul debería venir ¡Verde! ¡Ah, no! ¡El patrón parece ser A-BB, A-BB...! ¡Rojo-Azul-Azul! Entonces, después del primer Rojo-Azul-Azul, ¿qué debería seguir? ¡OTRO ROJO! ¡Ese Verde está mal! ¡Cámbienlo por un ROJO! Ahora tenemos R-A-A-R-A... ¿Qué falta después de la A? ¡BB! ¡Falta un AZUL! Pónganlo en el hueco. Y al final, ¿qué venía después de A-BB? ¡Nada! ¡Ah, pero Zorp puso un Verde al final! ¡Quizás el patrón era A-BB-C y lo que falta es la C al final! ¡Añadan el VERDE! ¡Pongan bloques para los Cristales K3!"
+                        *Corrección interna durante el diálogo para llegar al patrón A-BB-C y arreglarlo.*
+                        *Diálogo ajustado K3:* "¡Agentes expertos K3! ¡Este código está muy dañado! Rojo-Azul-Azul-VERDE-Rojo-Azul-[ESPACIO]-VERDE... ¡Uf! ¿Cuál será el patrón? ¡Quizás A-BB-C! Rojo(A)-Azul(B)-Azul(B)-Verde(C). Veamos... ¿El cuarto ladrillo, ese Verde, encaja si el patrón es A-BB-C? ¡Sí! Entonces A-BB-C. Luego empieza de nuevo con Rojo(A)-Azul(B)... ¿Qué falta después de la B? ¡Otra B! ¡Falta un AZUL! Pónganlo en el hueco. Y después de A-BB... ¿qué viene? ¡La C! ¡Falta un VERDE al final! ¡Añadan el AZUL y el VERDE! ¡Pongan bloques para los Cristales K3!"
+
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 6: ¡Verificando el Código Descifrado! -->
+<div id="activity-6" class="activity">
+    <div class="banner" onclick="toggleContent('probando-codigo')">
+        <div class="title">✅ Actividad 6: ¡Probando la Ruta a los Cristales! ⏰ Tiempo: 7 minutos</div>
+        <div class="subtitle">Objetivo: Ejecutar el tren sobre la vía CORREGIDA y verificar que la secuencia de acciones ahora sigue el patrón identificado y llega al destino (cristales).</div>
+    </div>
+    <div id="probando-codigo" class="content">
+        <table>
+             <!-- K1 -->
+            <tr class="k1-content">
+                <td><strong>PASO 1 - K1 (7 minutos):</strong> Reproduce la **DIAPOSITIVA 12** "¡Ruta K1 Descifrada!". Guía para probar el tren en la vía corregida (Rojo-Azul-Rojo-Azul). Observar si realiza la secuencia A-B-A-B y llega a los Cristales K1.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Equipo K1! ¡Mensaje arreglado! ¡Pongan al Coding Express al inicio! ¡Empujón! Veamos si sigue el patrón A-B-A-B: ¿Rojo? ¿Azul? ¿Rojo? ¿Azul? ¡Y llegó a los Cristales K1! ¡Lo lograron! ¡Descifraron el código!"
+                    </div>
+                </td>
+            </tr>
+             <!-- K2 -->
+             <tr class="k2-content">
+                 <td><strong>PASO 1 - K2 (7 minutos):</strong> Reproduce la **DIAPOSITIVA 13** "¡Ruta K2 Correcta!". Guía para probar el tren (Rojo-Azul-Amarillo-Rojo-Amarillo-Rojo). Observar si realiza la secuencia A-B-C-A-C-A (o A-B-C-A-B-C si se ajustó la lógica K3 al K2). Verificar que llega a Cristales K2. *Ajuste*: Se usará el patrón A-B-C. Ruta: R-A-Y-R-A-Y.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Detectives K2! ¡Código corregido! ¡Tren al inicio! ¡Empujón! El patrón era A-B-C. Veamos si hace: ¿Rojo(A)-Azul(B)-Amarillo(C)... y otra vez... Rojo(A)-Azul(B)-Amarillo(C)? ¡Sí! ¡Y llegó a los Cristales K2! ¡Excelente trabajo de depuración!"
+                    </div>
+                </td>
+            </tr>
+             <!-- K3 -->
+             <tr class="k3-content">
+                 <td><strong>PASO 1 - K3 (7 minutos):</strong> Reproduce la **DIAPOSITIVA 14** "¡Ruta K3 Asegurada!". Guía para probar el tren (Rojo-Azul-Azul-Verde-Rojo-Azul-Azul-Verde). Observar si realiza el patrón A-BB-C dos veces. Verificar llegada a Cristales K3.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Maestros K3! ¡El código final! ¡Tren al inicio! ¡Empujón! El patrón era A-BB-C. Verifiquemos: ¿Rojo(A)-Azul(B)-Azul(B)-Verde(C)... y de nuevo... Rojo(A)-Azul(B)-Azul(B)-Verde(C)? ¡Sí! ¡Una secuencia larga y compleja, perfectamente descifrada y corregida! ¡Llegaron a los Cristales K3! ¡Son los mejores agentes!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 7 OMITIDA -->
+
+<!-- Actividad 8: Conclusión y Reflexión -->
+<div id="activity-8" class="activity">
+    <div class="banner" onclick="toggleContent('conclusion-reflexion')">
+        <div class="title">🏁 Actividad 8: ¡Cristales Recuperados, Mensaje Descifrado! ⏰ Tiempo: 5 minutos</div>
+        <div class="subtitle">Objetivo: Celebrar el éxito en la depuración de patrones, reforzar la importancia de identificar la regla subyacente y corregir errores para lograr el objetivo.</div>
+    </div>
+    <div id="conclusion-reflexion" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 15** "¡Misión Cumplida!". Reúne al grupo, felicita por descifrar el mensaje y encontrar los cristales. Realiza preguntas sobre el proceso de encontrar y corregir.</td>
+                <td>
+                    <div class="dialogue">
+                        "¡MISIÓN CUMPLIDA, agentes descifradores del CODE SQUAD! ¡Han corregido el mensaje secreto del Agente Zorp y han guiado al Coding Express hasta los valiosos Cristales de Energía! ¡El cuartel general está a salvo gracias a ustedes! Pensemos en nuestro trabajo de detectives:
+1. ¿Qué fue lo más difícil de encontrar en el mensaje dañado? (¡El error! ¡La parte que faltaba!)
+2. ¿Cómo supimos cuál era el patrón correcto o qué ladrillo faltaba? (¡Miramos lo que se repetía! ¡Encontramos la regla secreta del patrón!)
+3. ¿Fue importante arreglar el código antes de enviar al tren? ¿Por qué? (¡Sí, para que no se perdiera! ¡Para que llegara al lugar correcto!)
+¡Hoy nos convertimos en expertos cazadores de errores y descifradores de códigos! Aprendimos que incluso cuando un mensaje o un plan tiene problemas, si observamos con atención y encontramos el patrón, ¡podemos arreglarlo! ¡Son brillantes resolviendo misterios! ¡Hasta la próxima misión secreta!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+        <!-- ............................................Aquí terminarán las actividades........................................... -->
+
+    </div>
+
+<script>
+    function toggleContent(id) {
+        var content = document.getElementById(id);
+        var parentActivity = content.closest('.activity'); // Encuentra el contenedor de la actividad
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            parentActivity.classList.remove('active'); // Remueve clase activa si se cierra
+        } else {
+             // Opcional: Cierra otros contenidos abiertos antes de abrir uno nuevo
+             // closeAllContents();
+            content.style.display = "block";
+            parentActivity.classList.add('active'); // Añade clase activa si se abre
+        }
+    }
+
+    // Función opcional para cerrar todos los demás contenidos al abrir uno
+    /*
+    function closeAllContents() {
+        var allContents = document.querySelectorAll('.content');
+        var allActivities = document.querySelectorAll('.activity');
+        allContents.forEach(function(content) {
+            content.style.display = 'none';
+        });
+         allActivities.forEach(function(activity) {
+             activity.classList.remove('active');
+         });
+    }
+    */
+
+    function updateContent() {
+        var level = document.getElementById("class-level").value;
+        // Actualiza el texto del título H2
+        var levelText = document.getElementById("class-level").options[document.getElementById("class-level").selectedIndex].text;
+        document.getElementById("selected-level").innerText = "Nivel: " + levelText;
+
+        // Oculta todas las filas de contenido específico de nivel primero
+        var k1Contents = document.querySelectorAll('.k1-content');
+        var k2Contents = document.querySelectorAll('.k2-content');
+        var k3Contents = document.querySelectorAll('.k3-content');
+
+        k1Contents.forEach(function(el) { el.style.display = 'none'; });
+        k2Contents.forEach(function(el) { el.style.display = 'none'; });
+        k3Contents.forEach(function(el) { el.style.display = 'none'; });
+
+        // Muestra solo las filas del nivel seleccionado
+        // Usamos 'table-row' porque estamos mostrando/ocultando filas de tabla (<tr>)
+        var selectedContents = document.querySelectorAll('.' + level.toLowerCase() + '-content');
+        selectedContents.forEach(function(el) {
+             // Importante: Necesitamos asegurarnos de que el display sea correcto para filas de tabla
+             if (el.tagName === 'TR') {
+                 el.style.display = 'table-row';
+             } else {
+                 // Si por alguna razón hay otros elementos, usar 'block' o ajustar según sea necesario
+                 el.style.display = 'block';
+             }
+        });
+    }
+
+    // Asegura que updateContent se ejecute cuando la página cargue
+    document.addEventListener('DOMContentLoaded', function() {
+        updateContent();
+    });
+</script>
+
+</body>
+</html>
